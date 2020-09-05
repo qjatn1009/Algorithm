@@ -1,3 +1,4 @@
+#인터넷 참고하였음.
 N = int(input())
 Sequence = []
 possible = True
