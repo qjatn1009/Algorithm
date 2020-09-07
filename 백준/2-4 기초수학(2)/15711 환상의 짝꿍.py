@@ -1,3 +1,4 @@
+# https://algwang.tistory.com/57 참고
 from math import sqrt
 # numbers, count = [],
 
@@ -23,14 +24,3 @@ for i in range(T):
             continue
         else:
             print("NO")        
-    
-    # for i in range(2,(length//2)+1):
-    #     if i > 2 and i % 2 == 0:
-    #         continue
-    #     if isPrime(i) and isPrime(length-i):
-    #         print("YES")
-    #         possible = False
-    #         break
-    # if possible:
-    #     print("NO")
-
