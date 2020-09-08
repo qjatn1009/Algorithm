@@ -1,4 +1,4 @@
-#보고 공부좀 더할것..
+#보고 공부좀 더할것.. BFS로 품
 N, K = map(int, input().split())
 
 if N >= K:
