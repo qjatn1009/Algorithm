@@ -7,7 +7,7 @@ move_list =[[0,0]]
 for i in range(N):
     miro.append(list(map(int, input())))
 
-def DFS(row, col):
+def BFS(row, col):
     while move_list:
         row, col = move_list.pop(0)
         if row == N - 1 and col == M - 1 :
@@ -25,7 +25,7 @@ def DFS(row, col):
         if col > 0 and miro[row][col-1] == 1 and check[row][col-1] == 0:# 왼쪽
             check[row][col-1] = check[row][col] + 1
             move_list.append([row, col-1])
-DFS(0, 0)
+BFS(0, 0)
 
 
 # DFS로 푼거
