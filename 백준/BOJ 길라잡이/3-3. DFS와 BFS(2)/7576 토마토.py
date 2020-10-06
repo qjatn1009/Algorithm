@@ -23,7 +23,7 @@ def bfs():
         row, col = move.popleft()
         if c == count:
             return result
-            break
+            
         for i in range(4):
             x = row + dx[i]
             y = col + dy[i]
