@@ -9,7 +9,9 @@ def solution(genres, plays):
             dic[genres[i]][0] += plays[i]
     for i in dic:
         dic[i][1:] = sorted(dic[i][1:], reverse= True, key = lambda x : x[0])
+    print(dic)
     dic = sorted(dic.items(), key = lambda x : x[1][0], reverse= True)
+    print(dic)
     for i in dic:
         if len(i[1]) >= 3:
             answer.append(i[1][1][1])

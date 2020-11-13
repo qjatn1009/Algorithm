@@ -9,7 +9,7 @@ dp = [[-1 for _ in range(n)] for _ in range(m)]
 
 def dfs(ny, nx):    
 
-    if nx == n-1 and ny == m-1:
+    if nx == n-1 and ny == m-1: 
         return 1
     if dp[ny][nx] != -1:
         return dp[ny][nx]
