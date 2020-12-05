@@ -1,18 +1,13 @@
-# 아직 해결 못함
 N = int(input())
-date, money, result, day=[0],[0],0,1
+day = [[0, 0]]
+dp = [0] * (N + 1)
 for i in range(N):
-    T,P = map(int, input().split())
-    date.append(T)
-    money.append(P)
-print(date,money)
+    day.append(list(map(int, input().split())))
+    day[i + 1][0] += i
 
-while day<=N:
-    if money[day]/date[day]>=money[day+1]/date[day+1]:
-        result+=money[day]
-        day+=date[day]
-
-    else:
-        day+=1
-
-print(result)
+for i in range(1, N + 1):
+    dp[i] = dp[i- 1]
+    for j in range(1, i + 1):
+        if i == day[j][0]:
+            dp[i] = max(dp[j - 1] + day[j][1], dp[i])
+print(dp[-1])
